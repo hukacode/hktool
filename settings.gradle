@@ -1,3 +1,5 @@
-rootProject.name = 'java-example'
+rootProject.name = 'hktool'
 include(
+  'goalkicker-downloader'
+  , 'project-builder'
 )
