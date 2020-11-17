@@ -1,18 +1,17 @@
 import org.springframework.boot.gradle.plugin.SpringBootPlugin
 
 plugins {
-    id "org.springframework.boot" version "2.3.5.RELEASE" apply false
+    id "org.springframework.boot" version "2.4.0" apply false
     id "net.ltgt.apt" version "0.21"
 }
 
-description = "Java example"
+description = ""
 
 ext {
     mapstructVersion = "1.4.1.Final"
     jjwtVersion = "0.9.1"
     openCsvVersion = "4.6"
     springfoxSwagger2Version = "2.9.2"
-
 
 //    springBootVersion = "2.3.2.RELEASE"
 //    springDataVersion = "2.3.2.RELEASE"
@@ -46,11 +45,11 @@ configure(allprojects) {
     apply plugin: "net.ltgt.apt"
     apply plugin: "net.ltgt.apt-idea"
 
-    group = "com.hukacode.java.example"
+    group = "com.hukacode.hktool"
     version = "0.0.1"
 
     jar {
-        archiveAppendix = "java-example"
+        archiveAppendix = "hktool"
     }
 
     repositories {
