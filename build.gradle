@@ -40,10 +40,12 @@ ext {
 }
 
 configure(allprojects) {
+    apply plugin: "eclipse"
     apply plugin: "java"
     apply plugin: "io.spring.dependency-management"
     apply plugin: "net.ltgt.apt"
     apply plugin: "net.ltgt.apt-idea"
+    apply plugin: "org.springframework.boot"
 
     group = "com.hukacode.hktool"
     version = "0.0.1"
@@ -65,6 +67,13 @@ configure(allprojects) {
 
     test {
         useJUnitPlatform()
+    }
+    
+    task makeSrcDirs {
+       sourceSets.main.java.srcDirs*.mkdirs()
+       sourceSets.main.resources.srcDirs*.mkdirs()
+       sourceSets.test.java.srcDirs*.mkdirs()
+       sourceSets.test.resources.srcDirs*.mkdirs()
     }
 
     sourceCompatibility = JavaVersion.VERSION_11

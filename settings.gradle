@@ -1,5 +1,8 @@
 rootProject.name = 'hktool'
-include(
+include (
   'goalkicker-downloader'
-  , 'project-builder'
+  , 'project-template'
+  , 'webclient-oauth2'
+  , 'post-backup'
+  , 'improve-logging'
 )
