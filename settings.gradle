@@ -1,5 +1,6 @@
 rootProject.name = 'hktool'
 include(
   'goalkicker-downloader'
-  , 'project-builder'
+  , 'project-template'
+  , 'improve-logging'
 )
